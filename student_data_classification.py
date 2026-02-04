@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
 
 e= pd.read_csv('student_dataset_detailed.csv')
 
@@ -117,4 +117,5 @@ results["Actual"] = y_train             # if you have true labels
 results["Predicted"] = x_pre         # add predictions
 
 results.to_csv("prediction.csv", index=False)
+
 print("\nPredictions are saved in \"prediction.csv\" file.")
